@@ -34,9 +34,8 @@
   }
 
   .ll-banner {
-    width: 100%;
-    max-width: 620px;       /* Increased width */
-    height: 260px;          /* Increased height */
+     width: min(96%, 850px);
+    height: clamp(220px, 38vw, 350px);       /* Increased height */
     border-radius: 24px;
     background: linear-gradient(135deg, #1f2833 0%, #0b0c10 100%);
     position: relative;
@@ -66,8 +65,8 @@
     animation: fadeInUp 0.8s ease-out 0.2s both;
   }
   .ll-avatar {
-    width: 112px;
-    height: 112px;
+    width:clamp(100px,18vw,140px);
+    height:clamp(100px,18vw,140px);
     border-radius: 50%;
     border: 4px solid var(--bg);
     box-shadow: 0 0 0 2px var(--accent), 0 8px 24px rgba(0,0,0,0.6);
@@ -93,11 +92,11 @@
   }
 
   .ll-links {
-    width: 100%;
-    max-width: 420px;
+     width: min(94%, 650px);
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 16px;
+    display: flex;
     z-index: 1;
   }
 
@@ -105,7 +104,7 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    padding: 16px 22px;
+   padding: 18px 24px;
     border-radius: 16px;
     background: var(--glass-bg);
     backdrop-filter: blur(16px);
@@ -113,7 +112,8 @@
     border: 1px solid var(--glass-border);
     color: var(--text);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: clamp(16px,2vw,20px);
+    min-height:72px;
     font-weight: 500;
     box-shadow: var(--shadow);
     transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
@@ -205,21 +205,51 @@
     to   { opacity: 1; transform: translateY(0); }
   }
 
-  @media (max-width: 480px) {
-    .ll-banner { height: 140px; border-radius: 16px; }
-    .ll-avatar { width: 96px; height: 96px; }
-    .ll-name { font-size: 1.4rem; }
-    .ll-btn { padding: 14px 18px; border-radius: 14px; }
-  }
+  @media (max-width:768px){
+
+.ll-page{
+padding:18px 12px 30px;
+}
+
+.ll-banner{
+width:100%;
+height:220px;
+border-radius:18px;
+}
+
+.ll-links{
+width:100%;
+max-width:100%;
+}
+
+.ll-btn{
+font-size:16px;
+padding:18px;
+min-height:68px;
+}
+
+}
+
+@media (min-width:769px){
+
+.ll-links{
+max-width:650px;
+}
+
+.ll-banner{
+max-width:850px;
+}
+
+}
 </style>
 
 <div class="ll-page">
   <div class="ll-banner">
-    <img src="https://scontent.fisb1-2.fna.fbcdn.net/v/t39.30808-6/733831565_122093817933392751_3398203182217283649_n.png?stp=dst-png&cstp=mx1732x908&ctp=s1732x908&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHVKOKAPGnYVoTGiWaEC8dIGWjoz1GedYoZaOjPUZ51ipa39X-7LkW2u5b2uG3a4E8OlpQKt1ixaLyuPokiukYg&_nc_ohc=groOIh8IA-0Q7kNvwETPzKU&_nc_oc=Adpq0HWxKm2RGnCiV5sAwDTzzNx8PeNCGJrDSkMc4I8EafqWRQuA-VB94Gx428W3w4UbO2w7r8klnDvUhG-kPRwz&_nc_zt=23&_nc_ht=scontent.fisb1-2.fna&_nc_gid=nnxtRrETjxuoHrZqckiaYQ&_nc_ss=7b2a8&oh=00_AQCSOHCp2Mi-e6zyFDQK1YgZ6-HjEaPNVfyQziVtweXBAw&oe=6A6108FF" alt="Cover banner">
+  <img src="images/banner.jpg.png" alt="Bin Daud Logo">
   </div>
 
   <div class="ll-avatar-wrap">
-    <img class="ll-avatar" src="https://scontent.fisb17-1.fna.fbcdn.net/v/t39.30808-1/735354938_122306686346232074_480088547617406621_n.jpg?stp=dst-jpg_tt6&cstp=mx500x500&ctp=s200x200&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeHJkXF0j4rvFgCNZdiRkTNFHzacX_yVpr8fNpxf_JWmv-wFUIXo1WpswLiFSYW824si0qpkgxv_VPXxdNB78wj2&_nc_ohc=XWbWcnRKRIUQ7kNvwHwxsC_&_nc_oc=Adoc25EfhSTm-maldWv1At7s7dhs6AbnB-v___2GXszaH7X0v60q4OakmNXmdYBJgt_76EJzyEApQOK2KpOVejpS&_nc_zt=24&_nc_ht=scontent.fisb17-1.fna&_nc_gid=kwkFTsJmseDcJgCwj_WQCQ&_nc_ss=7b2a8&oh=00_AQCBIRxmz8r8SoLK88OkUH3NK6fS8t4I8JmHNOKbpn8dWw&oe=6A610D23" alt="Profile">
+    <img class="ll-avatar" src="images/logo.png.png" alt="Profile">
   </div>
 
   <h1 class="ll-name">BIN DAUD </h1>
